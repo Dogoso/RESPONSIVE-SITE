@@ -1,0 +1,109 @@
+@charset "utf8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+@font-face {
+    font-family: ArchitectsDaughter;
+    src: url('../resources/fonts/ArchitectsDaughter-Regular.ttf');
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    font: 12px ArchitectsDaughter, Arial, sans-serif;
+    background-color: #fff5bf;
+}
+
+b{
+    text-transform: uppercase;
+    color: #8d5c00;
+}
+
+div.body{
+    display: flex;
+}
+
+/* CLASS APRESENTATION CSS */
+
+div.apresentation{
+    font: 20px ArchitectsDaughter, Arial, sans-serif;
+    width: 350px;
+    padding: 40px;
+    margin-left: 180px;
+    margin-top: 180px;
+    border-radius: 10px;
+    background-color: #ffd077;
+    border: solid;
+    box-shadow: #1f1e1e 8px 8px;
+}
+
+div.apresentation > p {
+    font: 400 1em Montserrat, Arial, sans-serif;
+}
+
+/* NAVIGATION BAR CSS */
+
+div#navibar{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff5bf;
+    width: 45px;
+    height: 100vh;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+div#navibar > h1{
+    transition: 0.3s;
+}
+
+div#navibar:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+
+div#navibar:hover > h1{
+    padding-top: 15px;
+    font-size: 24px;
+    color: #afafaf;
+    text-align: left;
+    display: block;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    transition: 0.5s;
+}
+
+div#navibar:hover > h1 > span{
+    display: none;
+}
+
+div#navibar:hover > h1::after{
+    content: 'shibekkie';
+}
+
+/* IMAGES IN NAVIBAR CSS */
+
+div#navibar > div{
+    display: none;
+}
+
+div#navibar:hover > div{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+div.images > a {
+    padding-bottom: 10px;
+}
+
+/* LOGO MARK CSS */
+
+span.logomark {
+    display: flex;
+}

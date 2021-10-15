@@ -1,0 +1,79 @@
+@charset "utf8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+@font-face {
+    font-family: ArchitectsDaughter;
+    src: url('../resources/fonts/ArchitectsDaughter-Regular.ttf');
+}
+
+@media only screen and (max-width: 600px) {
+
+    /* CLASS APRESENTATION CSS */
+
+    div.apresentation{
+        font: 20px ArchitectsDaughter, Arial, sans-serif;
+        padding: 40px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 180px;
+        width: 390px;
+        border-radius: 10px;
+        background-color: #ffd077;
+        border: solid;
+        box-shadow: #1f1e1e 8px 8px;
+    }
+
+    /* NAVIGATION BAR CSS */
+
+    div#navibar{
+        position: fixed;
+        display: inline-flex;
+        flex-direction: row;
+        background-color: #fff5bf;
+        width: 100vw;
+        height: 5vh;
+        padding: 25px;
+        transition: 0.3s;
+    }
+
+    div#navibar:hover > h1{
+        padding-top: 0px;
+        font-size: 24px;
+        color: #afafaf;
+        text-align: left;
+        display: block;
+        writing-mode: horizontal-tb;
+        text-orientation: upright;
+        transition: 0.5s;
+    }
+
+    div#navibar:hover > h1::after{
+        content: 'shibekkie';
+    }
+
+    /* IMAGES IN NAVIBAR CSS */
+
+    div#navibar:hover > div{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 50px;
+    }
+
+    div.images{
+        display: inline-flex;
+        padding-right: 10%;
+    }
+
+    div.images > a {
+        padding-right: 1px;
+    }
+
+    /* LOGO MARK CSS */
+
+    span.logomark > img {
+        position: fixed;
+        margin-right: 60%;
+        margin-left: 40%;
+    }
+}
