@@ -12,6 +12,10 @@
     margin: 0px;
 }
 
+p{
+    font: 400 1em Montserrat, Arial, sans-serif;
+}
+
 body{
     font: 12px ArchitectsDaughter, Arial, sans-serif;
     background-color: #fff5bf;
@@ -22,18 +26,25 @@ b{
     color: #8d5c00;
 }
 
-div.body{
+div.body {
     display: flex;
+}
+
+/* DIV APRENSENTATION + CAT GIF*/
+
+div.apresentandcat {
+    display: flex;
+    flex-direction: column;
 }
 
 /* CLASS APRESENTATION CSS */
 
-div.apresentation{
+div.apresentation {
     font: 20px ArchitectsDaughter, Arial, sans-serif;
     width: 350px;
     padding: 40px;
     margin-left: 180px;
-    margin-top: 180px;
+    margin-top: 80px;
     border-radius: 10px;
     background-color: #ffd077;
     border: solid;
@@ -46,7 +57,7 @@ div.apresentation > p {
 
 /* NAVIGATION BAR CSS */
 
-div#navibar{
+div#navibar {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -58,16 +69,16 @@ div#navibar{
     transition: 0.3s;
 }
 
-div#navibar > h1{
+div#navibar > h1 {
     transition: 0.3s;
 }
 
-div#navibar:hover{
+div#navibar:hover {
     background-color: white;
     transition: 0.5s;
 }
 
-div#navibar:hover > h1{
+div#navibar:hover > h1 {
     padding-top: 15px;
     font-size: 24px;
     color: #afafaf;
@@ -78,21 +89,21 @@ div#navibar:hover > h1{
     transition: 0.5s;
 }
 
-div#navibar:hover > h1 > span{
+div#navibar:hover > h1 > span {
     display: none;
 }
 
-div#navibar:hover > h1::after{
+div#navibar:hover > h1::after {
     content: 'shibekkie';
 }
 
 /* IMAGES IN NAVIBAR CSS */
 
-div#navibar > div{
+div#navibar > div {
     display: none;
 }
 
-div#navibar:hover > div{
+div#navibar:hover > div {
     display: flex;
     flex-direction: column;
     padding-bottom: 50px;
@@ -106,4 +117,15 @@ div.images > a {
 
 span.logomark {
     display: flex;
+}
+
+/* CUTE CAT DIV CSS */
+
+div.catdiv {
+    margin-top: 5px;
+    margin-left: 290px;
+}
+
+img.catgif {
+    width: 40%;
 }

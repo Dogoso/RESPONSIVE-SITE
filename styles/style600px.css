@@ -8,16 +8,23 @@
 }
 
 @media only screen and (max-width: 600px) {
+    
+    /* DIV APRENSENTATION + CAT GIF */
+
+    div.apresentandcat {
+        display: block;
+        flex-direction: column;
+    }
 
     /* CLASS APRESENTATION CSS */
 
     div.apresentation{
         font: 20px ArchitectsDaughter, Arial, sans-serif;
         padding: 40px;
+        margin-top: 150px;
         margin-left: 10%;
         margin-right: 10%;
-        margin-top: 180px;
-        width: 390px;
+        width: 65%;
         border-radius: 10px;
         background-color: #ffd077;
         border: solid;
@@ -27,14 +34,14 @@
     /* NAVIGATION BAR CSS */
 
     div#navibar{
+        background-color: white;
+        color: #afafaf;
         position: fixed;
         display: inline-flex;
         flex-direction: row;
-        background-color: #fff5bf;
         width: 100vw;
         height: 5vh;
         padding: 25px;
-        transition: 0.3s;
     }
 
     div#navibar:hover > h1{
@@ -45,19 +52,27 @@
         display: block;
         writing-mode: horizontal-tb;
         text-orientation: upright;
-        transition: 0.5s;
+        transition: 0.0s;
     }
 
-    div#navibar:hover > h1::after{
+    div#navibar > h1::after{
+        content: 'shibekkie';
+    }
+    
+    div#navibar:hover > h1::after {
         content: 'shibekkie';
     }
 
     /* IMAGES IN NAVIBAR CSS */
 
+    div#navibar > div {
+        display: block;
+    }
+
     div#navibar:hover > div{
-        display: flex;
+        display: block;
         flex-direction: row;
-        padding-bottom: 50px;
+        padding-bottom: 0px;
     }
 
     div.images{
@@ -66,14 +81,26 @@
     }
 
     div.images > a {
-        padding-right: 1px;
+        padding-right: 10px;
+        padding-bottom: 0px;
     }
 
     /* LOGO MARK CSS */
 
     span.logomark > img {
-        position: fixed;
-        margin-right: 60%;
-        margin-left: 40%;
+        display: none;
     }
+
+    /* CUTE CAT DIV CSS */
+
+    div.catdiv {
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+
+    img.catgif {
+        width: 100%;
+    }
+
 }
+
