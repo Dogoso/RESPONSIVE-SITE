@@ -19,11 +19,13 @@ p{
 body{
     font: 12px ArchitectsDaughter, Arial, sans-serif;
     background-color: #fff5bf;
+    background-image: url('../resources/images/background.png');
+    background-size: 100% 100%;
 }
 
-b{
+strong{
     text-transform: uppercase;
-    color: #8d5c00;
+    color: #e77b22;
 }
 
 div.body {
@@ -49,10 +51,18 @@ div.apresentation {
     background-color: #ffd077;
     border: solid;
     box-shadow: #1f1e1e 8px 8px;
+    transition: 0.3s;
 }
 
 div.apresentation > p {
     font: 400 1em Montserrat, Arial, sans-serif;
+}
+
+div.apresentation:hover {
+    margin-top: 70px;
+    box-shadow: #4d4a4a 8px 8px 2px;
+    transition: 0.3s;
+    margin-bottom: 10px;
 }
 
 /* NAVIGATION BAR CSS */
@@ -62,7 +72,7 @@ div#navibar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #fff5bf;
+    background-color: #ffe29f;
     width: 45px;
     height: 100vh;
     padding: 25px;
@@ -122,10 +132,91 @@ span.logomark {
 /* CUTE CAT DIV CSS */
 
 div.catdiv {
-    margin-top: 5px;
-    margin-left: 290px;
+    margin-top: 200px;
+    margin-left: 70px;
+    width: 150px;
+    transition: 0.3s;
+}
+
+img.catgif:hover {
+    margin-left: -10px;
+    width: 140px;
+    transition: 0.3s;
 }
 
 img.catgif {
-    width: 40%;
+    width: 130px;
+    transition: 0.3s;
+}
+
+/* ABOUT ME DIV CSS */
+
+div.aboutme {
+    font: 20px ArchitectsDaughter, Arial, sans-serif;
+    width: 300px;
+    height: 440px;
+    padding: 40px;
+    margin-left: 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+    background-color: #ffc691;
+    border: solid;
+    box-shadow: #1f1e1e 8px 8px;
+    transition: 0.3s;
+}
+
+div.aboutme:hover {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    box-shadow: #4d4a4a 8px 8px 2px;
+}
+
+div.aboutme > h1 > strong {
+    text-transform: uppercase;
+    color: #c45b2a;
+}    
+
+/* BUTTON */
+
+div#museudiv{ 
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+button{
+    font: bold 20px Montserrat, Arial, sans-serif;
+    width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: #ee8c5e;
+    border: #572a16 solid;
+    box-shadow: #494949 2px 2px 4px;
+    margin-top: 0px;
+    transition: 0.3s;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #f3c42a;
+    border: #685311 solid;
+    text-decoration: underline;
+    margin-top: -5px;
+    box-shadow: #494949 2px 2px 10px;
+    transition: 0.3s;
+}
+
+/* FOOTER */
+
+footer {
+    font: bold 1.3em Montserrat, Arial, sans-serif;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+section {
+    text-align: right;
+    margin-top: 10px;
+    margin-left: 100px;
 }

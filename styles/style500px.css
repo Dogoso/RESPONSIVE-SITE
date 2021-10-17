@@ -1,0 +1,16 @@
+@charset "utf8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+@font-face {
+    font-family: ArchitectsDaughter;
+    src: url('../resources/fonts/ArchitectsDaughter-Regular.ttf');
+}
+
+@media only screen and (max-width: 500px) {
+
+    div.apresentation{
+        width: 55%;
+    }
+
+}
