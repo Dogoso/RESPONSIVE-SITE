@@ -21,6 +21,8 @@ body{
     background-color: #fff5bf;
     background-image: url('../resources/images/background.png');
     background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 strong{
