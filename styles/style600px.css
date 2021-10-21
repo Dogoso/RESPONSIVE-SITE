@@ -9,6 +9,12 @@
 
 @media only screen and (max-width: 600px) {
 
+    div.body {
+        display: block;
+        margin: auto;
+        max-width: 1050px;
+    }
+
     /* DIV APRENSENTATION + CAT GIF */
 
     div.apresentandcat {
@@ -31,6 +37,13 @@
         box-shadow: #1f1e1e 8px 8px;
     }
 
+    div.apresentation:hover {
+        margin-top: 150px;
+        box-shadow: #4d4a4a 8px 8px 2px;
+        transition: 0.3s;
+        margin-bottom: 0px;
+    }
+
     /* NAVIGATION BAR CSS */
 
     div#navibar{
@@ -42,6 +55,7 @@
         width: 100vw;
         height: 5vh;
         padding: 25px;
+        top: 0px;
     }
 
     div#navibar:hover > h1{
@@ -77,7 +91,7 @@
 
     div.images{
         display: inline-flex;
-        padding-right: 10%;
+        margin-right: 10%;
     }
 
     div.images > a {
@@ -94,12 +108,75 @@
     /* CUTE CAT DIV CSS */
 
     div.catdiv {
-        margin-top: 10px;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    img.catgif:hover {
         margin-left: 0px;
+        width: 100%;
+        transition: 0.3s;
     }
 
     img.catgif {
         width: 100%;
+    }
+
+    /* ABOUT ME DIV CSS */
+
+    div.aboutme {
+        display: block;
+        font: 20px ArchitectsDaughter, Arial, sans-serif;
+        max-width: 65%;
+        padding: 40px;
+        margin-left: 10%;
+        margin-right: 10%;
+        border-radius: 10px;
+        background-color: #ffc691;
+        border: solid;
+        box-shadow: #1f1e1e 8px 8px;
+        transition: 0.3s;
+    }
+
+    div.aboutme > h1{
+        font-size: 1.5em;
+    }
+
+    div.aboutme:hover {
+        margin-top: 40px;
+        margin-bottom: 0px;
+        transition: 0.3s;
+        box-shadow: #4d4a4a 8px 8px 2px;
+    }
+
+    /* BUTTON */
+
+    div#museudiv{ 
+        text-align: center;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    button{
+        width: 200px;
+        padding: 20px;
+        border-radius: 5px;
+        color: white;
+        background-color: #ee8c5e;
+        border: #572a16 solid;
+        box-shadow: #494949 2px 2px 4px;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: #f3c42a;
+        border: #685311 solid;
+        text-decoration: underline;
+        margin-top: 0px;
+        box-shadow: #494949 2px 2px 10px;
+        transition: 0.3s;
     }
 
 }

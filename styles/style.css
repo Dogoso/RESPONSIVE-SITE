@@ -30,6 +30,8 @@ strong{
 
 div.body {
     display: flex;
+    margin: auto;
+    max-width: 1050px;
 }
 
 /* DIV APRENSENTATION + CAT GIF*/
@@ -43,9 +45,8 @@ div.apresentandcat {
 
 div.apresentation {
     font: 20px ArchitectsDaughter, Arial, sans-serif;
-    width: 350px;
+    max-width: 350px;
     padding: 40px;
-    margin-left: 180px;
     margin-top: 80px;
     border-radius: 10px;
     background-color: #ffd077;
@@ -72,7 +73,7 @@ div#navibar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #ffe29f;
+    background-color: transparent;
     width: 45px;
     height: 100vh;
     padding: 25px;
@@ -104,7 +105,7 @@ div#navibar:hover > h1 > span {
 }
 
 div#navibar:hover > h1::after {
-    content: 'shibekkie';
+    content: 'Shibeeki';
 }
 
 /* IMAGES IN NAVIBAR CSS */
@@ -153,8 +154,7 @@ img.catgif {
 
 div.aboutme {
     font: 20px ArchitectsDaughter, Arial, sans-serif;
-    width: 300px;
-    height: 440px;
+    max-width: 300px;
     padding: 40px;
     margin-left: 40px;
     margin-top: 40px;
@@ -163,6 +163,14 @@ div.aboutme {
     border: solid;
     box-shadow: #1f1e1e 8px 8px;
     transition: 0.3s;
+}
+
+div.aboutme > h1 {
+    font-size: 1.7em;
+}
+
+div.aboutme > p {
+    font-size: 1em;
 }
 
 div.aboutme:hover {
@@ -181,7 +189,6 @@ div.aboutme > h1 > strong {
 
 div#museudiv{ 
     margin-top: 50px;
-    margin-left: 200px;
 }
 
 button{
