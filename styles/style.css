@@ -12,6 +12,11 @@
     margin: 0px;
 }
 
+:root {
+    --higthgligth: #e77b22;
+    --lighter: #ffd077;
+}
+
 p{
     font: 400 1em Montserrat, Arial, sans-serif;
 }
@@ -27,13 +32,117 @@ body{
 
 strong{
     text-transform: uppercase;
-    color: #e77b22;
+    color: var(--higthgligth);
 }
 
 div.body {
     display: flex;
     margin: auto;
     max-width: 1050px;
+}
+
+div.btngroup button {
+    float: left;
+    border-radius: 10px 10px 0px 0px;
+    border: none;
+    padding: 10px 30px;
+    font: bolder 1.3em Montserrat, Arial, sans-serif;
+    background-color: var(--lighter);
+    color: black;
+    cursor: pointer;
+}
+
+div.btngroup {
+    display: inline-block;
+}
+
+div.btngroup button:hover {
+    background-color: #ffb977;
+    transition: 0.3s;
+}
+
+/* OPTIONS DIV */
+
+div#options {
+    padding: 0px 0px 0px 80px;
+    margin: -5px -30px 0px -30px;
+    background-color: var(--lighter);
+}
+
+div.option > img {
+    height: 100%;
+    display: block;
+    margin: auto;
+    transform: translateX(-20%);
+}
+
+div.option {
+    display: inline-block;
+    background-color: var(--lighter);
+    max-width: 120px;
+    height: 200px;
+    box-shadow: 2px 2px 8px #00000056;
+    margin: 5px;
+    overflow: hidden;
+    opacity: 80%;
+    transition: 0.3s;
+}
+
+div.option:hover {
+    opacity: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* DIV HIGHLIGHT */
+
+div#highlight > h2{
+    font-size: 3em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+div#highlight > div{
+    max-width: 600px;
+    height: 400px;
+    display: block;
+    margin: auto;
+    background-color: #111111;
+    cursor: pointer;
+}
+
+div#highlight > div > img{
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+div#highlight {
+    overflow: hidden;
+    
+}
+
+/* CENTER */
+
+h1.center, h2.center{
+    text-align: center;
+}
+
+/* MAIN */
+
+main {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 4px #00000056;
+}
+
+main > h1 {
+    font-size: 4em;
+    text-transform: uppercase;
 }
 
 /* DIV APRENSENTATION + CAT GIF*/
@@ -51,7 +160,7 @@ div.apresentation {
     padding: 40px;
     margin-top: 80px;
     border-radius: 10px;
-    background-color: #ffd077;
+    background-color: var(--lighter);
     border: solid;
     box-shadow: #1f1e1e 8px 8px;
     transition: 0.3s;
@@ -193,7 +302,7 @@ div#museudiv{
     margin-top: 50px;
 }
 
-button{
+button#galery{
     font: bold 20px Montserrat, Arial, sans-serif;
     width: 400px;
     padding: 20px;
@@ -206,7 +315,7 @@ button{
     transition: 0.3s;
 }
 
-button:hover {
+button#galery:hover {
     cursor: pointer;
     background-color: #f3c42a;
     border: #685311 solid;
@@ -224,7 +333,7 @@ footer {
     padding: 20px;
 }
 
-section {
+section.right {
     text-align: right;
     margin-top: 10px;
     margin-left: 100px;
