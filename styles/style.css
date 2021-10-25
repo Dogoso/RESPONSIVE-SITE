@@ -109,23 +109,50 @@ div#highlight > div{
     margin: auto;
     background-color: #111111;
     cursor: pointer;
+    overflow: hidden;
 }
 
-div#highlight > div > img{
-    max-height: 100%;
+div#highlight img{
+    max-width: 100%;
     display: block;
     margin: auto;
+    transition: 0.3s;
+}
+
+div#highlight img:hover{
+    opacity: 60%;
+    transform: scale(1.5);
+    transition: 0.3s;
 }
 
 div#highlight {
     overflow: hidden;
-    
+}
+
+/*  VIEW */
+
+div.view {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+    transition: 0.3s;
+}
+
+img.view {
+    position: fixed;
+    cursor: zoom-in;
 }
 
 /* CENTER */
 
 h1.center, h2.center{
     text-align: center;
+}
+
+h1.star {
+    color: #c45b2a;
+    text-decoration: underline;
 }
 
 /* MAIN */
