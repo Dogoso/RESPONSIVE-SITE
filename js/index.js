@@ -29,9 +29,9 @@ let optionsDiv = window.document.querySelector('div#options')
 const SRC = 'resources/images/arts/'
 const SRCPORT = 'resources/images/portraits/'
 const SRCHEAD = 'resources/images/headers/'
-let allArtPaths = [`${SRC}Astro_boy1.png`, `${SRC}BASIL.png`, `${SRC}PRIZE1.png`, `${SRC}commission-1.png`, `${SRC}eu_e_ele.png`, `${SRC}DTIYS1.png`, `${SRC}Existential_crisis.png`, `${SRC}oni.png`, `${SRC}UNTITLEED.png`]
-let allPortraitsPaths = [`${SRCPORT}astro-portrait.jpg`, `${SRCPORT}basil-portrait.jpg`, `${SRCPORT}duck-portrait.jpg`, `${SRCPORT}food-portrait.jpg`, `${SRCPORT}couple-portrait.jpg`, `${SRCPORT}drawinyourstyle-portrait.jpg`, `${SRCPORT}crisis-portrait.jpg`, `${SRCPORT}oni-portrait.jpg`, `${SRCPORT}gore-portrait.jpg`]
-let allHeadersPaths = [`${SRCHEAD}astro.jpg`, `${SRCHEAD}basil.jpg`, `${SRCHEAD}duck.jpg`, `${SRCHEAD}food.jpg`, `${SRCHEAD}couple.jpg`, `${SRCHEAD}dyst.jpg`, `${SRCHEAD}crisis.jpg`, `${SRCHEAD}oni.jpg`, `${SRCHEAD}gore.jpg`]
+let allArtPaths = [`${SRC}Astro_boy1.png`, `${SRC}BASIL.png`, `${SRC}PRIZE1.png`, `${SRC}commission-1.png`, `${SRC}eu_e_ele.png`, `${SRC}DTIYS1.png`, `${SRC}Existential_crisis.png`, `${SRC}oni.png`, `${SRC}UNTITLEED.png`, `${SRC}UNTITLEED.png`]
+let allPortraitsPaths = [`${SRCPORT}astro-portrait.jpg`, `${SRCPORT}basil-portrait.jpg`, `${SRCPORT}duck-portrait.jpg`, `${SRCPORT}food-portrait.jpg`, `${SRCPORT}couple-portrait.jpg`, `${SRCPORT}drawinyourstyle-portrait.jpg`, `${SRCPORT}crisis-portrait.jpg`, `${SRCPORT}oni-portrait.jpg`, `${SRCPORT}gore-portrait.jpg`, `${SRCPORT}gore-portrait.jpg`]
+let allHeadersPaths = [`${SRCHEAD}astro.jpg`, `${SRCHEAD}basil.jpg`, `${SRCHEAD}duck.jpg`, `${SRCHEAD}food.jpg`, `${SRCHEAD}couple.jpg`, `${SRCHEAD}dyst.jpg`, `${SRCHEAD}crisis.jpg`, `${SRCHEAD}oni.jpg`, `${SRCHEAD}gore.jpg`, `${SRCHEAD}gore.jpg`]
 let curHeadersPaths = [`${SRCHEAD}astro.jpg`, `${SRCHEAD}basil.jpg`, `${SRCHEAD}duck.jpg`, `${SRCHEAD}food.jpg`, `${SRCHEAD}couple.jpg`]
 let arts = [`${SRC}Astro_boy1.png`, `${SRC}BASIL.png`, `${SRC}PRIZE1.png`, `${SRC}commission-1.png`, `${SRC}eu_e_ele.png`]
 let curSrc = arts[0]
@@ -169,6 +169,7 @@ btns[0].onclick = function() {
         curHeadersPaths[i] = allHeadersPaths[i];
         btnOptions[i].src = allPortraitsPaths[i];
     }
+	document.body.style.backgroundColor = '#FFE2A0'
     document.body.style.backgroundImage = 'url(resources/images/background.jpg)'
     main.style.backgroundColor = 'white'
     optionsDiv.style.backgroundColor = 'var(--lighter)'
@@ -183,6 +184,7 @@ btns[1].onclick = function() {
         btnOptions[i-5].src = allPortraitsPaths[i];
     }
     //Setting dark theme
+	document.body.style.backgroundColor = '#231C24'
     document.body.style.backgroundImage = 'url(resources/images/background-dark.jpg)'
     main.style.backgroundColor = 'white'
     optionsDiv.style.backgroundColor = 'var(--light)'
