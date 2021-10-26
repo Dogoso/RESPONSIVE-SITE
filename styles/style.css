@@ -55,10 +55,17 @@ div.btngroup button {
     background-color: var(--lighter);
     color: black;
     cursor: pointer;
+    box-shadow: 2px -1px 2px #00000048;
 }
 
 div.btngroup {
     display: inline-block;
+    position: absolute;
+    top: -38px;
+}
+
+.btngroupoutside {
+    position: relative;
 }
 
 div.btngroup button:hover {
@@ -73,9 +80,13 @@ button#selected {
 /* OPTIONS DIV */
 
 div#options {
-    padding: 0px 0px 0px 80px;
-    margin: -5px -30px 0px -30px;
+    margin: 0px -30px 0px -30px;
     background-color: var(--lighter);
+}
+
+div#centeroptions {
+    margin: auto;
+    max-width: fit-content;
 }
 
 div.option > img {
@@ -90,10 +101,11 @@ div.option {
     max-width: 120px;
     height: 200px;
     box-shadow: 2px 2px 8px #00000056;
-    margin: 5px;
+    margin-top: 5px;
     overflow: hidden;
     opacity: 80%;
     transition: 0.3s;
+    z-index: 1;
 }
 
 div.opacityfull {
@@ -115,16 +127,20 @@ div#highlight > h2{
 }
 
 div#highlight > div{
+    z-index: 2px;
     max-width: 600px;
     height: 400px;
     display: block;
     margin: auto;
-    background-color: #111111;
     cursor: pointer;
     overflow: hidden;
+    background-color: #111111;
+    border: solid 5px black;
+    box-shadow: 2px 2px 2px #0000004d;
 }
 
 div#highlight img{
+    z-index: 2px;
     max-height: 100%;
     display: block;
     margin: auto;
@@ -154,6 +170,7 @@ div.lupa {
 /*  VIEW */
 
 div.view {
+    z-index: 100001;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -228,6 +245,7 @@ div.apresentation:hover {
 /* NAVIGATION BAR CSS */
 
 div#navibar {
+    z-index: 100000;
     position: fixed;
     display: flex;
     flex-direction: column;

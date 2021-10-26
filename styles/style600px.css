@@ -179,5 +179,31 @@
         transition: 0.3s;
     }
 
+    /* GROUP BUTTONS */
+
+    div.btngroup {
+        left: -30px;
+    }
+
+    div.btngroup button {
+        box-shadow: none;
+    }
+
+    /* OPTIONS DIV */
+
+    div.option {
+        height: 100px;
+    }
+
+    /* LUPA */
+
+    div.lupa {
+        display: block;
+        position: absolute;
+        font-size: 2em;
+        top: 2%;
+        left: 85%;
+    }
+
 }
 

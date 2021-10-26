@@ -58,29 +58,36 @@
         <h1 class="center">Galeria</h1>
         <div id="highlight">
             <div class="container">
-                <img id="hglimage" src="resources/images/headers/astro.jpg" alt="highlight">
+                <picture>
+                    <source class="hglimage" media="(max-width: 600px)" srcset="resources/images/headers/astro-p.jpg">
+                    <img class="hglimage" src="resources/images/headers/astro.jpg" alt="highlight">
+                </picture>
                 <div class="lupa">&#x1F50D;</div>
             </div>
         </div>
-        <div class="btngroup">
-            <button class="group" id="selected">soft</button>
-            <button class="group">spoopy</button>
+        <div class="btngroupoutside">
+            <div class="btngroup">
+                <button class="group" id="selected">soft</button>
+                <button class="group">spoopy</button>
+            </div>
         </div>
         <div id="options">
-            <div class="option opacityfull" id="one">
-                <img class="imgoption" src="resources/images/portraits/astro-portrait.jpg" alt="Digital art 1">
-            </div>
-            <div class="option" id="two">
-                <img class="imgoption" src="resources/images/portraits/basil-portrait.jpg" alt="Digital art 2">
-            </div>
-            <div class="option" id="tree">
-                <img class="imgoption" src="resources/images/portraits/duck-portrait.jpg" alt="Digital art 3">
-            </div>
-            <div class="option" id="four">
-                <img class="imgoption" src="resources/images/portraits/food-portrait.jpg" alt="Digital art 4">
-            </div>
-            <div class="option" id="five">
-                <img class="imgoption" src="resources/images/portraits/couple-portrait.jpg" alt="Digital art 5">
+            <div id="centeroptions">
+                <div class="option opacityfull" id="one">
+                    <img class="imgoption" src="resources/images/portraits/astro-portrait.jpg" alt="Digital art 1">
+                </div>
+                <div class="option" id="two">
+                    <img class="imgoption" src="resources/images/portraits/basil-portrait.jpg" alt="Digital art 2">
+                </div>
+                <div class="option" id="tree">
+                    <img class="imgoption" src="resources/images/portraits/duck-portrait.jpg" alt="Digital art 3">
+                </div>
+                <div class="option" id="four">
+                    <img class="imgoption" src="resources/images/portraits/food-portrait.jpg" alt="Digital art 4">
+                </div>
+                <div class="option" id="five">
+                    <img class="imgoption" src="resources/images/portraits/couple-portrait.jpg" alt="Digital art 5">
+                </div>
             </div>
         </div>
     </main>

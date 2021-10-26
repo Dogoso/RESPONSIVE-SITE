@@ -14,7 +14,7 @@ let fourhgl = window.document.querySelector('div#four')
 let fivehgl = window.document.querySelector('div#five')
 
 // HIGHTLIGHT DIV
-let hightlight = window.document.querySelector('img#hglimage')
+let hightlight = window.document.querySelectorAll('.hglimage')
 let lupa = window.document.querySelector('div.lupa')
 
 // BUTTON GROUP
@@ -44,12 +44,12 @@ function addOpacity(option) {
 function setImgFullScreen() {
     let margin = 40
     let size = window.innerHeight - margin
-    view.style.height = `${ window.innerHeight }px`
-    view.style.width = `${ window.innerWidth }px`
+    view.style.minHeight = `${ window.innerHeight }px`
+    view.style.minWidth = `${ window.innerWidth }px`
     view.style.backgroundColor = '#000000D6'
     view.style.display = 'block'
     imgView.src = curSrc
-    imgView.style.height = `${ size }px`
+    imgView.style.minHeight = `${ size }px`
     imgView.style.top = `${ margin / 2 }px`
 }
 
@@ -58,28 +58,32 @@ imgView.onload = function() {
 }
 
 // Aparecer a bendita da lupa
-hightlight.addEventListener('mouseenter', function(){
+hightlight[1].addEventListener('mouseenter', function(){
     lupa.style.display = 'block'
-    hightlight.style.transform = 'scale(1.8)'
-    hightlight.style.opacity = '60%'
+    hightlight[1].style.transform = 'scale(1.8)'
+    hightlight[1].style.opacity = '60%'
 })
 
-hightlight.addEventListener('mouseout', function(){
-    lupa.style.display = 'none'
-    hightlight.style.transform = 'scale(1.0)'
-    hightlight.style.opacity = '100%'
+hightlight[1].addEventListener('mouseout', function(){
+    if(window.innerWidth > 600) {
+        lupa.style.display = 'none'
+    }
+    hightlight[1].style.transform = 'scale(1.0)'
+    hightlight[1].style.opacity = '100%'
 })
 
 lupa.addEventListener('mouseenter', function(){
     lupa.style.display = 'block'
-    hightlight.style.transform = 'scale(1.8)'
-    hightlight.style.opacity = '60%'
+    hightlight[1].style.transform = 'scale(1.8)'
+    hightlight[1].style.opacity = '60%'
 })
 
 lupa.addEventListener('mouseout', function(){
-    lupa.style.display = 'none'
-    hightlight.style.transform = 'scale(1.0)'
-    hightlight.style.opacity = '100%'
+    if(window.innerWidth > 600) {
+        lupa.style.display = 'none'
+    }
+    hightlight[1].style.transform = 'scale(1.0)'
+    hightlight[1].style.opacity = '100%'
 })
 
 lupa.addEventListener('click', function(){
@@ -93,7 +97,11 @@ btnGalery.onclick = function() {
 }
 
 //Scaling image
-hightlight.onclick = function() {
+hightlight[1].onclick = function() {
+    setImgFullScreen()
+}
+
+hightlight[0].onclick = function() {
     setImgFullScreen()
 }
 
@@ -115,31 +123,36 @@ btnClose.onclick = function() {
 
 // Changing image
 onehgl.onclick = function() {
-    hightlight.src = curHeadersPaths[0]
+    hightlight[0].srcset = curHeadersPaths[0].replace('.jpg', '-p.jpg')
+    hightlight[1].src = curHeadersPaths[0]
     curSrc = arts[0]
     addOpacity(onehgl)
 }
 
 twohgl.onclick = function() {
-    hightlight.src = curHeadersPaths[1]
+    hightlight[0].srcset = curHeadersPaths[1].replace('.jpg', '-p.jpg')
+    hightlight[1].src = curHeadersPaths[1]
     curSrc = arts[1]
     addOpacity(twohgl)
 }
 
 treehgl.onclick = function() {
-    hightlight.src = curHeadersPaths[2]
+    hightlight[0].srcset = curHeadersPaths[2].replace('.jpg', '-p.jpg')
+    hightlight[1].src = curHeadersPaths[2]
     curSrc = arts[2]
     addOpacity(treehgl)
 }
 
 fourhgl.onclick = function() {
-    hightlight.src = curHeadersPaths[3]
+    hightlight[0].srcset = curHeadersPaths[3].replace('.jpg', '-p.jpg')
+    hightlight[1].src = curHeadersPaths[3]
     curSrc = arts[3]
     addOpacity(fourhgl)
 }
 
 fivehgl.onclick = function() {
-    hightlight.src = curHeadersPaths[4]
+    hightlight[0].srcset = curHeadersPaths[4].replace('.jpg', '-p.jpg')
+    hightlight[1].src = curHeadersPaths[4]
     curSrc = arts[4]
     addOpacity(fivehgl)
 }
