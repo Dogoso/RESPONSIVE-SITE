@@ -44,12 +44,12 @@ function addOpacity(option) {
 function setImgFullScreen() {
     let margin = 40
     let size = window.innerHeight - margin
-    view.style.minHeight = `${ window.innerHeight }px`
-    view.style.minWidth = `${ window.innerWidth }px`
+    view.style.height = `${ window.innerHeight }px`
+    view.style.width = `${ window.innerWidth }px`
     view.style.backgroundColor = '#000000D6'
     view.style.display = 'block'
     imgView.src = curSrc
-    imgView.style.minHeight = `${ size }px`
+    imgView.style.height = `${ size }px`
     imgView.style.top = `${ margin / 2 }px`
 }
 
