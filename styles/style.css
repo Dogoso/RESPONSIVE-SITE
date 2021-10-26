@@ -29,10 +29,11 @@ p{
 body{
     font: 12px ArchitectsDaughter, Arial, sans-serif;
     background-color: #fff5bf;
-    background-image: url('../resources/images/background.png');
+    background-image: url('../resources/images/background.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    transition: 0.3s;
 }
 
 strong{
@@ -69,8 +70,11 @@ div.btngroup {
 }
 
 div.btngroup button:hover {
-    background-color: #ffb977;
-    transition: 0.3s;
+    text-decoration: underline;
+}
+
+div.btngroup button#selected:hover {
+    text-decoration: underline;
 }
 
 button#selected {
@@ -376,7 +380,7 @@ button#galery{
     color: white;
     background-color: #ee8c5e;
     border: #572a16 solid;
-    box-shadow: #494949 2px 2px 4px;
+    box-shadow: 2px 2px 4px #00000049;
     margin-top: 0px;
     transition: 0.3s;
 }
@@ -387,7 +391,7 @@ button#galery:hover {
     border: #685311 solid;
     text-decoration: underline;
     margin-top: -5px;
-    box-shadow: #494949 2px 2px 10px;
+    box-shadow: 2px 2px 10px #00000027;
     transition: 0.3s;
 }
 
@@ -401,7 +405,7 @@ footer {
 
 footer strong {
     font-weight: 800;
-    color: var(--darker);
+    color: black;
 }
 
 section.right {

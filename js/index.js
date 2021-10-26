@@ -1,5 +1,8 @@
 let btnGalery = window.document.querySelector('button#galery')
-let down = 700
+
+// MAIN
+let main = window.document.querySelector('main')
+
 // VIEW
 let view = window.document.querySelector('div.view')
 let imgView = window.document.querySelector('img.view')
@@ -20,6 +23,7 @@ let lupa = window.document.querySelector('div.lupa')
 // BUTTON GROUP
 let btns = window.document.querySelectorAll('button.group')
 let btnOptions = window.document.querySelectorAll('img.imgoption')
+let optionsDiv = window.document.querySelector('div#options')
 
 // IMAGES PATH
 const SRC = 'resources/images/arts/'
@@ -92,8 +96,7 @@ lupa.addEventListener('click', function(){
 
 // IR PARA GALERIA
 btnGalery.onclick = function() {
-    document.body.scrollTop = down
-    document.documentElement.scrollTop = down
+    hightlight[1].scrollIntoView()
 }
 
 //Scaling image
@@ -160,25 +163,27 @@ fivehgl.onclick = function() {
 // Changing the portraits and the selected section
 // SOFT
 btns[0].onclick = function() {
-    btns[0].id = 'selected'
-    btns[1].id = ''
-    let main = window.document.querySelector('main')
     main.style.backgroundColor = 'white'
     for(let i = 0; i < 5; i++) {
         arts[i] = allArtPaths[i]
         curHeadersPaths[i] = allHeadersPaths[i];
         btnOptions[i].src = allPortraitsPaths[i];
     }
+    document.body.style.backgroundImage = 'url(resources/images/background.jpg)'
+    main.style.backgroundColor = 'white'
+    optionsDiv.style.backgroundColor = 'var(--lighter)'
 }
 
 // SPOOPY
 btns[1].onclick = function() {
-    btns[0].id = ''
-    btns[1].id = 'selected'
     //Changing the portraits
     for(let i = 5; i < 10; i++) {
         arts[i-5] = allArtPaths[i]
         curHeadersPaths[i-5] = allHeadersPaths[i];
         btnOptions[i-5].src = allPortraitsPaths[i];
     }
+    //Setting dark theme
+    document.body.style.backgroundImage = 'url(resources/images/background-dark.jpg)'
+    main.style.backgroundColor = 'white'
+    optionsDiv.style.backgroundColor = 'var(--light)'
 }
