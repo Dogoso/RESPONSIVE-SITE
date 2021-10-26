@@ -24,9 +24,13 @@ let btnOptions = window.document.querySelectorAll('img.imgoption')
 // IMAGES PATH
 const SRC = 'resources/images/arts/'
 const SRCPORT = 'resources/images/portraits/'
-var allArtPaths = [`${SRC}Astro_boy1.png`, `${SRC}BASIL.png`, `${SRC}PRIZE1.png`, `${SRC}commission-1.png`, `${SRC}eu_e_ele.png`, `${SRC}DTIYS1.png`, `${SRC}Existential_crisis.png`, `${SRC}oni.png`, `${SRC}UNTITLEED.png`]
-var allPortraitsPaths = [`${SRCPORT}astro-portrait.jpg`, `${SRCPORT}basil-portrait.jpg`, `${SRCPORT}duck-portrait.jpg`, `${SRCPORT}food-portrait.jpg`, `${SRCPORT}couple-portrait.jpg`, `${SRCPORT}drawinyourstyle-portrait.jpg`, `${SRCPORT}crisis-portrait.jpg`, `${SRCPORT}oni-portrait.jpg`, `${SRCPORT}gore-portrait.jpg`]
-var arts = [`${SRC}Astro_boy1.png`, `${SRC}BASIL.png`, `${SRC}PRIZE1.png`, `${SRC}commission-1.png`, `${SRC}eu_e_ele.png`]
+const SRCHEAD = 'resources/images/headers/'
+let allArtPaths = [`${SRC}Astro_boy1.png`, `${SRC}BASIL.png`, `${SRC}PRIZE1.png`, `${SRC}commission-1.png`, `${SRC}eu_e_ele.png`, `${SRC}DTIYS1.png`, `${SRC}Existential_crisis.png`, `${SRC}oni.png`, `${SRC}UNTITLEED.png`]
+let allPortraitsPaths = [`${SRCPORT}astro-portrait.jpg`, `${SRCPORT}basil-portrait.jpg`, `${SRCPORT}duck-portrait.jpg`, `${SRCPORT}food-portrait.jpg`, `${SRCPORT}couple-portrait.jpg`, `${SRCPORT}drawinyourstyle-portrait.jpg`, `${SRCPORT}crisis-portrait.jpg`, `${SRCPORT}oni-portrait.jpg`, `${SRCPORT}gore-portrait.jpg`]
+let allHeadersPaths = [`${SRCHEAD}astro.jpg`, `${SRCHEAD}basil.jpg`, `${SRCHEAD}duck.jpg`, `${SRCHEAD}food.jpg`, `${SRCHEAD}couple.jpg`, `${SRCHEAD}dyst.jpg`, `${SRCHEAD}crisis.jpg`, `${SRCHEAD}oni.jpg`, `${SRCHEAD}gore.jpg`]
+let curHeadersPaths = [`${SRCHEAD}astro.jpg`, `${SRCHEAD}basil.jpg`, `${SRCHEAD}duck.jpg`, `${SRCHEAD}food.jpg`, `${SRCHEAD}couple.jpg`]
+let arts = [`${SRC}Astro_boy1.png`, `${SRC}BASIL.png`, `${SRC}PRIZE1.png`, `${SRC}commission-1.png`, `${SRC}eu_e_ele.png`]
+let curSrc = arts[0]
 
 function addOpacity(option) {
     onehgl.classList.remove('opacityfull')
@@ -40,12 +44,12 @@ function addOpacity(option) {
 function setImgFullScreen() {
     let margin = 40
     let size = window.innerHeight - margin
+    imgView.src = curSrc
+    imgView.style.height = `${ size }px`
     view.style.height = `${ window.innerHeight }px`
     view.style.width = `${ window.innerWidth }px`
     view.style.backgroundColor = '#000000D6'
     view.style.display = 'block'
-    imgView.src = curSrc
-    imgView.style.height = `${ size }px`
     imgView.style.top = `${ margin / 2 }px`
     imgView.style.left = `${ window.innerWidth / 2 - imgView.clientWidth / 2}px`
 }
@@ -107,32 +111,32 @@ btnClose.onclick = function() {
 
 // Changing image
 onehgl.onclick = function() {
-    hightlight.src = arts[0]
-    curSrc = hightlight.src
+    hightlight.src = curHeadersPaths[0]
+    curSrc = arts[0]
     addOpacity(onehgl)
 }
 
 twohgl.onclick = function() {
-    hightlight.src = arts[1]
-    curSrc = hightlight.src
+    hightlight.src = curHeadersPaths[1]
+    curSrc = arts[1]
     addOpacity(twohgl)
 }
 
 treehgl.onclick = function() {
-    hightlight.src = arts[2]
-    curSrc = hightlight.src
+    hightlight.src = curHeadersPaths[2]
+    curSrc = arts[2]
     addOpacity(treehgl)
 }
 
 fourhgl.onclick = function() {
-    hightlight.src = arts[3]
-    curSrc = hightlight.src
+    hightlight.src = curHeadersPaths[3]
+    curSrc = arts[3]
     addOpacity(fourhgl)
 }
 
 fivehgl.onclick = function() {
-    hightlight.src = arts[4]
-    curSrc = hightlight.src
+    hightlight.src = curHeadersPaths[4]
+    curSrc = arts[4]
     addOpacity(fivehgl)
 }
 
@@ -145,6 +149,7 @@ btns[0].onclick = function() {
     main.style.backgroundColor = 'white'
     for(let i = 0; i < 5; i++) {
         arts[i] = allArtPaths[i]
+        curHeadersPaths[i] = allHeadersPaths[i];
         btnOptions[i].src = allPortraitsPaths[i];
     }
 }
@@ -156,6 +161,7 @@ btns[1].onclick = function() {
     //Changing the portraits
     for(let i = 5; i < 10; i++) {
         arts[i-5] = allArtPaths[i]
+        curHeadersPaths[i-5] = allHeadersPaths[i];
         btnOptions[i-5].src = allPortraitsPaths[i];
     }
 }
