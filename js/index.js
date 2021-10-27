@@ -61,6 +61,16 @@ imgView.onload = function() {
     imgView.style.left = `${ window.innerWidth / 2 - imgView.clientWidth / 2}px`
 }
 
+window.onresize = function() {
+    let margin = 40
+    let size = window.innerHeight - margin
+    view.style.height = `${ window.innerHeight }px`
+    view.style.width = `${ window.innerWidth }px`
+    imgView.style.height = `${ size }px`
+    imgView.style.top = `${ margin / 2 }px`
+    imgView.style.left = `${ window.innerWidth / 2 - imgView.clientWidth / 2}px`
+}
+
 // Aparecer a bendita da lupa
 hightlight[1].addEventListener('mouseenter', function(){
     lupa.style.display = 'block'
